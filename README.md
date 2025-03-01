@@ -3,7 +3,7 @@
 ### Hi there 👋, I am ..
 
 # Rasty Cannu Espartero
-__`Computer Science`__ __`2nd Year Student`__ 
+__`Computer Science`__ __`3rd Year Student`__ 
 
 
 
