@@ -5,8 +5,16 @@
 # Rasty Cannu Espartero
 __`Computer Science`__ __`3rd Year Student`__ 
 
+I’m a **Computer Science student** with a deep passion for **software development, compiler design, and systems programming**. I thrive in solving complex problems, optimizing code efficiency, and diving into **low-level programming concepts**.  
 
 
-A dedicated undergraduate aspiring to excel as a __`Full Stack Developer`__. Driven by a profound passion for crafting elegant and efficient code, my journey is propelled by a deep commitment to harness the power of technology for positive transformation. Through a relentless pursuit of knowledge and a genuine enthusiasm for problem-solving, I am poised to contribute to meaningful tech-driven advancements that resonate beyond the realm of code.
+## **🛠 Tech Stack**  
+💻 **Programming Languages:**  
+- C, C++, C#, Java, Python, SQL, Bash  
+
+🌐 **Web Technologies:**  
+- HTML, CSS, Bootstrap, React, javascript
+
+
 
 
