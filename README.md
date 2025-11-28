@@ -151,27 +151,6 @@
 - Edge runtimes and serverless for low-latency slices of bigger systems.
 - Tighter security practices: SAST/DAST in pipelines, secrets hygiene, and threat modeling basics.
 
-## GitHub pulse
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RastyFullStaxx&theme=github_dark" alt="Profile details" />
-</p>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RastyFullStaxx&theme=github_dark" alt="Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RastyFullStaxx&theme=github_dark&utcOffset=8" alt="Productive time" />
-</p>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RastyFullStaxx&layout=compact&hide_border=true&theme=transparent" alt="Top languages" />
-</p>
-
-## Trophy shelf
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=RastyFullStaxx&theme=algolia&no-frame=true&margin-w=10" alt="GitHub trophies" />
-</p>
-
-## Let's build
-
-Open to collaborations on automation tooling, backend services, ML-infused features, and developer experience. Ping me if you want to ship something fast and reliable.
