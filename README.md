@@ -1,15 +1,5 @@
 ![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
-<h1 align="center">Rasty Cannu Espartero</h1>
-
-<p align="center">
-  Backend-first full stack engineer · Automation & DevOps · Systems tinkerer · ML-inclined
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=0EA5E9&center=true&vCenter=true&width=700&lines=Designing+backend-first+products;Automating+builds%2C+tests%2C+and+deploys;Shipping+full+stack+experiences+that+stay+fast" alt="Typing animation" />
-</p>
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=110&section=header&text=Let's%20ship%20faster&fontColor=0b1b26&fontSize=28" alt="Wave header" />
 </p>
