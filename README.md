@@ -154,12 +154,12 @@
 ## GitHub pulse
 
 <p align="center">
-  <a href="https://github.com/RastyFullStaxx">
-    <img src="https://github-readme-stats.vercel.app/api?username=RastyFullStaxx&show_icons=true&include_all_commits=true&hide_border=true&theme=transparent" alt="GitHub stats" />
-  </a>
-  <a href="https://git.io/streak-stats">
-    <img src="https://streak-stats.demolab.com?user=RastyFullStaxx&hide_border=true&theme=transparent" alt="GitHub streak" />
-  </a>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RastyFullStaxx&theme=github_dark" alt="Profile details" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RastyFullStaxx&theme=github_dark" alt="Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RastyFullStaxx&theme=github_dark&utcOffset=8" alt="Productive time" />
 </p>
 
 <p align="center">
