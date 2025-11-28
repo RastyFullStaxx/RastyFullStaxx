@@ -7,21 +7,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/RastyFullStaxx?tab=followers">
-    <img src="https://img.shields.io/github/followers/RastyFullStaxx?label=Followers&style=for-the-badge&color=0ea5e9&labelColor=0b7480" alt="GitHub followers" />
-  </a>
-  <a href="https://github.com/RastyFullStaxx">
-    <img src="https://komarev.com/ghpvc/?username=RastyFullStaxx&style=for-the-badge&color=0ea5e9&label=Profile+views" alt="Profile views" />
-  </a>
-  <a href="https://github.com/RastyFullStaxx">
-    <img src="https://img.shields.io/badge/Building-Automation%20%26%20DX-0ea5e9?style=for-the-badge&labelColor=0b7480" alt="Now building" />
-  </a>
-  <a href="https://github.com/RastyFullStaxx">
-    <img src="https://img.shields.io/badge/Available-For%20collab-0ea5e9?style=for-the-badge&labelColor=0b7480" alt="Collaboration" />
-  </a>
-</p>
-
-<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&pause=1200&color=0EA5E9&center=true&vCenter=true&width=700&lines=Designing+backend-first+products;Automating+builds%2C+tests%2C+and+deploys;Shipping+full+stack+experiences+that+stay+fast" alt="Typing animation" />
 </p>
 
