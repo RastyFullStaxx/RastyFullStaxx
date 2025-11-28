@@ -45,20 +45,6 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RastyFullStaxx&theme=github_dark" alt="Most used languages" />
 </p>
 
-## What I do
-
-- Design and ship resilient APIs, services, and automation with Java, Python, C#, Node.js, and C.
-- Build full stack products with modern JS frameworks and purposeful UI systems.
-- Automate builds, testing, observability, and deployments with CI/CD, containers, and IaC.
-- Optimize data flows with relational/NoSQL stores; layer caching, streaming, and ML where it matters.
-
-## Highlights
-
-- Backend-first mindset: start from the domain, contracts, and data models before pixels.
-- Performance curious: profiling, async/concurrency, and backpressure instead of guesswork.
-- DevOps baked in: logging, metrics, traces, and release hygiene as part of the delivery.
-- Pragmatic security and reliability: auth flows, rate limits, guardrails to keep systems steady.
-
 ## Tech stack
 
 <div align="center" style="width: 100%;">
@@ -136,6 +122,20 @@
   </div>
 
 </div>
+
+## What I do
+
+- Design and ship resilient APIs, services, and automation with Java, Python, C#, Node.js, and C.
+- Build full stack products with modern JS frameworks and purposeful UI systems.
+- Automate builds, testing, observability, and deployments with CI/CD, containers, and IaC.
+- Optimize data flows with relational/NoSQL stores; layer caching, streaming, and ML where it matters.
+
+## Highlights
+
+- Backend-first mindset: start from the domain, contracts, and data models before pixels.
+- Performance curious: profiling, async/concurrency, and backpressure instead of guesswork.
+- DevOps baked in: logging, metrics, traces, and release hygiene as part of the delivery.
+- Pragmatic security and reliability: auth flows, rate limits, guardrails to keep systems steady.
 
 ## Current focus
 
