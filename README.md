@@ -34,7 +34,9 @@
 <img src="https://skillicons.dev/icons?i=react,nextjs,vue,svelte,bootstrap,tailwind,html,css&perline=10" alt="Frontend" />
 
 <p><strong>Machine Learning & Data</strong></p>
-<img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn,pandas,numpy,anaconda&perline=8" alt="ML and Data" />
+<img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn,anaconda&perline=8" alt="ML and Data" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" height="34" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" height="34" />
 
 <p><strong>DevOps & Cloud</strong></p>
 <img src="https://skillicons.dev/icons?i=docker,kubernetes,terraform,aws,gcp,azure,nginx,linux,bash&perline=10" alt="DevOps and Cloud" />
@@ -71,6 +73,5 @@
 - Event-driven architectures, brokers, and data streaming at scale.
 - Edge runtimes and serverless for low-latency slices of bigger systems.
 - Tighter security practices: SAST/DAST in pipelines, secrets hygiene, and threat modeling basics.
-
 
 
