@@ -53,13 +53,6 @@
 - Automate builds, testing, observability, and deployments with CI/CD, containers, and IaC.
 - Optimize data flows with relational/NoSQL stores; layer caching, streaming, and ML where it matters.
 
-## Highlights
-
-- Backend-first mindset: start from the domain, contracts, and data models before pixels.
-- Performance curious: profiling, async/concurrency, and backpressure instead of guesswork.
-- DevOps baked in: logging, metrics, traces, and release hygiene as part of the delivery.
-- Pragmatic security and reliability: auth flows, rate limits, guardrails to keep systems steady.
-
 ## Current focus
 
 - Hardening automation pipelines with Docker, CI/CD, and IaC.
