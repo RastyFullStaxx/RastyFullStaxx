@@ -47,7 +47,7 @@
 <!-- ===================== WHAT I DO ===================== -->
 
 <h2 align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-original.svg" height="28" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="28" />
   &nbsp; What I Do
 </h2>
 
@@ -104,6 +104,6 @@ My work focuses on creating software that is **fast, stable, secure, and enginee
 <br>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> **ML Optimization** — faster inference, compact models  
 </div>
-
+<br>
 ![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
