@@ -1,11 +1,13 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=Backend%20ML%20Cybersecurity&fontColor=ffffff&fontSize=32&theme=github_dark"
-    alt="Wave header"
+    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=tokyonight"
   />
 </p>
 
+
 ## Visual overview
+
+<br>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RastyFullStaxx&theme=github_dark" alt="Profile details" />
@@ -20,6 +22,8 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RastyFullStaxx&theme=github_dark" alt="Repos per language" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RastyFullStaxx&theme=github_dark" alt="Most used languages" />
 </p>
+
+<br>
 
 ## Tech stack
 
