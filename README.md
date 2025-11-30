@@ -1,10 +1,8 @@
-![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0ea5e9&height=110&section=header&text=Let's%20ship%20faster&fontColor=0b1b26&fontSize=28" alt="Wave header" />
 </p>
 
-## Visual overview
+<h2 align="left">Visual overview</h2>
 
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RastyFullStaxx&theme=github_dark" alt="Profile details" />
@@ -20,7 +18,7 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RastyFullStaxx&theme=github_dark" alt="Most used languages" />
 </p>
 
-## Tech stack
+<h2 align="left">Tech stack</h2>
 
 <div align="center">
 
@@ -46,25 +44,23 @@
 
 </div>
 
-## What I do
+<h2 align="left">What I do</h2>
 
 - Design and ship resilient APIs, services, and automation with Java, Python, C#, Node.js, and C.
 - Build full stack products with modern JS frameworks and purposeful UI systems.
 - Automate builds, testing, observability, and deployments with CI/CD, containers, and IaC.
 - Optimize data flows with relational/NoSQL stores; layer caching, streaming, and ML where it matters.
 
-## Current focus
+<h2 align="left">Current focus</h2>
 
 - Hardening automation pipelines with Docker, CI/CD, and IaC.
 - Keeping backend performance sharp with profiling, async patterns, and caching.
 - Exploring cloud-native patterns to scale services reliably.
 - Elevating developer experience with templates, documentation, and fast feedback loops.
 
-## Currently exploring
+<h2 align="left">Currently exploring</h2>
 
 - GitOps-first delivery, platform engineering patterns, and service catalogs.
 - Event-driven architectures, brokers, and data streaming at scale.
 - Edge runtimes and serverless for low-latency slices of bigger systems.
 - Tighter security practices: SAST/DAST in pipelines, secrets hygiene, and threat modeling basics.
-
-
