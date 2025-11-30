@@ -1,7 +1,7 @@
 ![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117,0b1b26,0e3a66&height=180&section=header&text=Let's%20ship%20faster&fontColor=ffffff&fontSize=32" alt="Wave header" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0b2c4d,0e446d,155c8b&height=180&section=header&text=Let's%20ship%20faster&fontColor=ffffff&fontSize=32" alt="Wave header" />
 </p>
 
 ## Visual overview
