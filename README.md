@@ -98,12 +98,14 @@ My work focuses on creating software that is **fast, stable, secure, and enginee
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="22" /> **GitOps & Platform Engineering** — smoother developer platforms  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="22" /> **Event-Driven Systems** — streaming, reactive flows  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="22" /> **Event-Driven Systems** — streaming, reactive flows  
 <br>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" height="22" /> **Cybersecurity Workflows** — threat modeling, secure pipelines  
 <br>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> **ML Optimization** — faster inference, compact models  
 </div>
+
 <br>
+
 ![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
