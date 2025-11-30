@@ -1,5 +1,3 @@
-![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0b2c4d,0e446d,155c8b&height=180&section=header&text=Let's%20ship%20faster&fontColor=ffffff&fontSize=32" alt="Wave header" />
 </p>
@@ -46,25 +44,66 @@
 
 </div>
 
-## What I do
+<!-- ===================== WHAT I DO ===================== -->
 
-- Design and ship resilient APIs, services, and automation with Java, Python, C#, Node.js, and C.
-- Build full stack products with modern JS frameworks and purposeful UI systems.
-- Automate builds, testing, observability, and deployments with CI/CD, containers, and IaC.
-- Optimize data flows with relational/NoSQL stores; layer caching, streaming, and ML where it matters.
+<h2 align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-original.svg" height="28" />
+  &nbsp; What I Do
+</h2>
 
-## Current focus
+I build across backend systems, full-stack products, machine learning workflows, and practical cybersecurity.  
+My work focuses on creating software that is **fast, stable, secure, and engineered with intent**.
 
-- Hardening automation pipelines with Docker, CI/CD, and IaC.
-- Keeping backend performance sharp with profiling, async patterns, and caching.
-- Exploring cloud-native patterns to scale services reliably.
-- Elevating developer experience with templates, documentation, and fast feedback loops.
+<div align="left">
 
-## Currently exploring
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="24" /> **Backend Engineering** — APIs, services, architectures  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="24" /> **DevOps & Automation** — CI/CD, containers, IaC  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="24" /> **Machine Learning** — model integration, inference pipelines  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="24" /> **Cybersecurity** — secure builds, secrets hygiene, hardening  
+</div>
 
-- GitOps-first delivery, platform engineering patterns, and service catalogs.
-- Event-driven architectures, brokers, and data streaming at scale.
-- Edge runtimes and serverless for low-latency slices of bigger systems.
-- Tighter security practices: SAST/DAST in pipelines, secrets hygiene, and threat modeling basics.
+<br>
 
+<!-- ===================== CURRENT FOCUS ===================== -->
+
+<h2 align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="26" />
+  &nbsp; Current Focus
+</h2>
+
+<div align="left">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="22" /> **CI/CD Excellence** — faster pipelines, reproducible infra  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="22" /> **Backend Performance** — profiling, async, caching  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="22" /> **Cloud-Native Patterns** — scalable, predictable systems  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="22" /> **Security-First Mindset** — secure tooling, safe delivery  
+</div>
+
+<br>
+
+<!-- ===================== EXPLORING ===================== -->
+
+<h2 align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="26"/>
+  &nbsp; Currently Exploring
+</h2>
+
+<div align="left">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="22" /> **GitOps & Platform Engineering** — smoother developer platforms  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg" height="22" /> **Event-Driven Systems** — streaming, reactive flows  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" height="22" /> **Cybersecurity Workflows** — threat modeling, secure pipelines  
+<br>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> **ML Optimization** — faster inference, compact models  
+</div>
+
+![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
