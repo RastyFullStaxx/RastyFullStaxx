@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0b2c4d,0e446d,155c8b&height=180&section=header&text=Let's%20ship%20faster&fontColor=ffffff&fontSize=32" alt="Wave header" />
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=Backend%20ML%20Cybersecurity&fontColor=ffffff&fontSize=32&theme=github_dark"
+    alt="Wave header"
+  />
 </p>
 
 ## Visual overview
@@ -19,6 +22,8 @@
 </p>
 
 ## Tech stack
+
+<br>
 
 <div align="center">
 
@@ -44,6 +49,8 @@
 
 </div>
 
+<br>
+
 <!-- ===================== WHAT I DO ===================== -->
 
 <h2 align="left">
@@ -52,17 +59,17 @@
 </h2>
 
 I build across backend systems, full-stack products, machine learning workflows, and practical cybersecurity.  
-My work focuses on creating software that is **fast, stable, secure, and engineered with intent**.
+My work focuses on creating software that is <strong>fast, stable, secure, and engineered with intent</strong>.
 
 <div align="left">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="24" /> **Backend Engineering** — APIs, services, architectures  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="24" /> <strong>Backend Engineering</strong> — APIs, services, architectures  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="24" /> **DevOps & Automation** — CI/CD, containers, IaC  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="24" /> <strong>DevOps & Automation</strong> — CI/CD, containers, IaC  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="24" /> **Machine Learning** — model integration, inference pipelines  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="24" /> <strong>Machine Learning</strong> — model integration, inference pipelines  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="24" /> **Cybersecurity** — secure builds, secrets hygiene, hardening  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="24" /> <strong>Cybersecurity</strong> — secure builds, secrets hygiene, hardening  
 </div>
 
 <br>
@@ -76,13 +83,13 @@ My work focuses on creating software that is **fast, stable, secure, and enginee
 
 <div align="left">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="22" /> **CI/CD Excellence** — faster pipelines, reproducible infra  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="22" /> <strong>CI/CD Excellence</strong> — faster pipelines, reproducible infra  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="22" /> **Backend Performance** — profiling, async, caching  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="22" /> <strong>Backend Performance</strong> — profiling, async, caching  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="22" /> **Cloud-Native Patterns** — scalable, predictable systems  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="22" /> <strong>Cloud-Native Patterns</strong> — scalable, predictable systems  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="22" /> **Security-First Mindset** — secure tooling, safe delivery  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="22" /> <strong>Security-First Mindset</strong> — secure tooling, safe delivery  
 </div>
 
 <br>
@@ -96,16 +103,15 @@ My work focuses on creating software that is **fast, stable, secure, and enginee
 
 <div align="left">
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="22" /> **GitOps & Platform Engineering** — smoother developer platforms  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="22" /> <strong>GitOps & Platform Engineering</strong> — smoother developer platforms  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="22" /> **Event-Driven Systems** — streaming, reactive flows  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="22" /> <strong>Event-Driven Systems</strong> — streaming, reactive flows  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" height="22" /> **Cybersecurity Workflows** — threat modeling, secure pipelines  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" height="22" /> <strong>Cybersecurity Workflows</strong> — threat modeling, secure pipelines  
 <br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> **ML Optimization** — faster inference, compact models  
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> <strong>ML Optimization</strong> — faster inference, compact models  
 </div>
 
 <br>
 
 ![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
-
