@@ -1,9 +1,9 @@
 <p align="center">
   <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=tokyonight"
+    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=github_dark"
+    alt="Wave header"
   />
 </p>
-
 
 ## Visual overview
 
