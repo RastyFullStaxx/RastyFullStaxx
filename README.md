@@ -1,9 +1,4 @@
-<p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=github_dark"
-    alt="Wave header"
-  />
-</p>
+![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
 
 ## Visual overview
 
@@ -118,4 +113,11 @@ My work focuses on creating software that is <strong>fast, stable, secure, and e
 
 <br>
 
-![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=github_dark"
+    alt="Wave header"
+  />
+</p>
+
+
