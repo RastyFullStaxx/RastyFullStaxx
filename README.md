@@ -11,12 +11,12 @@
 </p>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RastyFullStaxx&theme=github_dark" alt="Stats" />
+  <img src="[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/RastyFullStaxx?cardType=level-alternate&theme=github-dark&preferLogin=false)](https://git.io/awesome-stats-card)" alt="Stats" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RastyFullStaxx&theme=github_dark&utcOffset=8" alt="Productive time" />
 </p>
 
 <p align="center">
-  <img src="[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/RastyFullStaxx?cardType=level-alternate&theme=github-dark&preferLogin=false)](https://git.io/awesome-stats-card)" alt="Repos per language" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RastyFullStaxx&theme=github_dark" alt="Repos per language" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RastyFullStaxx&theme=github_dark" alt="Most used languages" />
 </p>
 
