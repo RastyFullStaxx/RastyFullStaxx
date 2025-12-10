@@ -120,4 +120,3 @@ My work focuses on creating software that is <strong>fast, stable, secure, and e
   />
 </p>
 
-
