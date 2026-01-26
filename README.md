@@ -2,7 +2,6 @@
 
 ## Visual overview
 
-
 <br>
   
 <p align="center">
