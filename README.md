@@ -32,13 +32,21 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 
 <img src="h-stats.svg" width="760" alt="stats" />
 
-<img src="stats.svg" width="840" alt="Contributions in the last year, with active days, best week, and a weekly sparkline." />
+<p align="center">
+  <img src="stats.svg" width="460" alt="Contributions in the last year, with active days, best week, and a weekly sparkline." />
+</p>
 
-<img src="streak.svg" width="840" alt="Current and longest contribution streaks, with date ranges." />
+<p align="center">
+  <img src="streak.svg" width="460" alt="Current and longest contribution streaks, with date ranges." />
+</p>
 
-<img src="langs.svg" width="840" alt="Top languages, ranked by bytes written and by number of repositories." />
+<p align="center">
+  <img src="langs.svg" width="460" alt="Top languages, ranked by bytes written and by number of repositories." />
+</p>
 
-<img src="year.svg" width="840" alt="The last year of contributions, one character per day." />
+<p align="center">
+  <img src="year.svg" width="460" alt="The last year of contributions, one character per day." />
+</p>
 
 <br />
 
@@ -86,7 +94,9 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 
 <img src="h-stack.svg" width="760" alt="stack" />
 
-<img src="stack.svg" width="840" alt="Tech stack across languages, backend and API, data, frontend, machine learning, apps and desktop, visualisation, devops and cloud, testing, and tools." />
+<p align="center">
+  <img src="stack.svg" width="460" alt="Tech stack across languages, backend and API, data, frontend, machine learning, apps and desktop, visualisation, devops and cloud, testing, and tools." />
+</p>
 
 <br />
 

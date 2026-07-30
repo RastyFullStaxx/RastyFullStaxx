@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-from svgkit import ROOT, escape, font_face, svg, theme_vars, write
+from svgkit import W, ROOT, escape, font_face, svg, theme_vars, write
 
 API = "https://api.github.com/graphql"
 RAMP = " .`:-=+*cs#%@"          # the portrait's own ramp, reused for the year grid
@@ -205,22 +205,22 @@ def draw_stats(user: dict, day_list: list[tuple[str, int]]) -> str:
     total = c["contributionCalendar"]["totalContributions"]
     wk = weekly(day_list)
     active = sum(1 for _, n in day_list if n > 0)
-    W, H = 760, 150
+    H = 128
 
     p = [
-        f'<text class="b" x="0" y="52" font-size="46">{total}</text>',
-        '<text class="d" x="0" y="76" font-size="12">contributions in the last year</text>',
-        f'<text x="{W}" y="26" font-size="17" text-anchor="end">{active}</text>',
-        f'<text class="d" x="{W}" y="42" font-size="11" text-anchor="end">active days</text>',
-        f'<text x="{W}" y="66" font-size="17" text-anchor="end">{max(wk)}</text>',
-        f'<text class="d" x="{W}" y="82" font-size="11" text-anchor="end">best week</text>',
+        f'<text class="b" x="0" y="44" font-size="38">{total}</text>',
+        '<text class="d" x="0" y="62" font-size="11">contributions in the last year</text>',
+        f'<text x="{W}" y="22" font-size="15" text-anchor="end">{active}</text>',
+        f'<text class="d" x="{W}" y="35" font-size="10" text-anchor="end">active days</text>',
+        f'<text x="{W}" y="56" font-size="15" text-anchor="end">{max(wk)}</text>',
+        f'<text class="d" x="{W}" y="69" font-size="10" text-anchor="end">best week</text>',
     ]
 
     # Weekly aggregate, so a line is defensible here -- continuity is real.
     # Daily counts are sparse and discrete and get characters instead; a line
     # through 0, 0, 11, 0 would claim values that never existed. See draw_year.
     peak = max(wk) or 1
-    gy, gh = H - 12, 46
+    gy, gh = H - 10, 38
     step = W / (len(wk) - 1)
     pts = " ".join(f"{i * step:.1f},{gy - v / peak * gh:.1f}" for i, v in enumerate(wk))
     p.append(f'<polyline points="0,{gy} {pts} {W},{gy}" fill="var(--fg)" opacity="0.09"/>')
@@ -235,21 +235,21 @@ def draw_stats(user: dict, day_list: list[tuple[str, int]]) -> str:
 
 
 def draw_streak(s: dict) -> str:
-    W, H = 760, 92
-    MID = 320                      # divider; the two halves read as one panel
+    H = 84
+    MID = 190                      # divider; the two halves read as one panel
     span = lambda r: f"{nice_date(r[0])} – {nice_date(r[1])}" if r[0] else "—"
 
     p = []
     for x, n, label, rng in (
         (0, s["current"], "current streak", s["current_range"]),
-        (MID + 40, s["longest"], "longest streak", s["longest_range"]),
+        (MID + 26, s["longest"], "longest streak", s["longest_range"]),
     ):
         p += [
-            f'<text class="b" x="{x}" y="44" font-size="38">{n}</text>',
-            f'<text class="d" x="{x}" y="66" font-size="12">{label}</text>',
-            f'<text class="d" x="{x}" y="84" font-size="11">{span(rng)}</text>',
+            f'<text class="b" x="{x}" y="38" font-size="32">{n}</text>',
+            f'<text class="d" x="{x}" y="58" font-size="11">{label}</text>',
+            f'<text class="d" x="{x}" y="74" font-size="10">{span(rng)}</text>',
         ]
-    p.append(f'<line x1="{MID}" y1="12" x2="{MID}" y2="{H - 8}" '
+    p.append(f'<line x1="{MID}" y1="8" x2="{MID}" y2="{H - 6}" '
              'stroke="var(--faint)" stroke-width="1"/>')
 
     return svg(W, H, base_style(), "".join(p),
@@ -258,29 +258,29 @@ def draw_streak(s: dict) -> str:
 
 
 def draw_langs(by_bytes: list, by_repo: list) -> str:
-    W = 760
-    ROW = 24
-    COL = 360                      # column width
-    NAME_W = 96                    # name gutter, then the bar starts
-    BAR_MAX = 170
-    H = 30 + max(len(by_bytes), len(by_repo)) * ROW
+    ROW = 20
+    COL = 188                      # column width
+    NAME_W = 74                    # name gutter, then the bar starts
+    BAR_MAX = 74
+    SIZE = 11
+    H = 26 + max(len(by_bytes), len(by_repo)) * ROW
 
     total = sum(v for _, v in by_bytes) or 1
     peak = max((v for _, v in by_repo), default=1) or 1
     p = []
 
     def column(x0: int, items: list, head: str, denom: int, fmt_val) -> None:
-        p.append(f'<text class="d" x="{x0}" y="12" font-size="11">{head}</text>')
+        p.append(f'<text class="d" x="{x0}" y="10" font-size="10">{head}</text>')
         for i, (name, v) in enumerate(items):
-            y = 36 + i * ROW
-            p.append(f'<text x="{x0}" y="{y}" font-size="12">{escape(name.lower())}</text>')
-            p.append(f'<rect class="bar" x="{x0 + NAME_W}" y="{y - 8}" rx="1.5" '
-                     f'width="{BAR_MAX * v / denom:.1f}" height="7"/>')
-            p.append(f'<text class="d" x="{x0 + COL}" y="{y}" font-size="11" '
+            y = 30 + i * ROW
+            p.append(f'<text x="{x0}" y="{y}" font-size="{SIZE}">{escape(name.lower())}</text>')
+            p.append(f'<rect class="bar" x="{x0 + NAME_W}" y="{y - 7}" rx="1.5" '
+                     f'width="{BAR_MAX * v / denom:.1f}" height="6"/>')
+            p.append(f'<text class="d" x="{x0 + COL}" y="{y}" font-size="10" '
                      f'text-anchor="end">{fmt_val(v)}</text>')
 
     column(0, by_bytes, "by bytes", total, lambda v: f"{v / total * 100:.0f}%")
-    column(400, by_repo, "by repos", peak, str)
+    column(212, by_repo, "by repos", peak, str)
 
     label = "Top languages by bytes: " + ", ".join(
         f"{k} {v / total * 100:.0f} percent" for k, v in by_bytes
@@ -294,12 +294,11 @@ def draw_year(day_list: list[tuple[str, int]]) -> str:
     Characters, not rectangles: it is the one graphic that ties the data half of
     the page back to the portrait.
     """
-    W = 760
-    SIZE = 11
+    SIZE = 9
     CHAR = SIZE * 0.600
-    ROW = 13
-    GX = 40                        # grid left edge; weekday labels sit left of it
-    GY = 62                        # first grid row baseline
+    ROW = 11
+    GX = 26                        # grid left edge; weekday labels sit left of it
+    GY = 52                        # first grid row baseline
     peak = max(c for _, c in day_list) or 1
 
     grid: dict[tuple[int, int], str] = {}
@@ -316,22 +315,22 @@ def draw_year(day_list: list[tuple[str, int]]) -> str:
 
     p = []
     active = sum(1 for _, n in day_list if n > 0)
-    p.append('<text class="d" x="0" y="12" font-size="11">the year</text>')
-    p.append(f'<text class="d" x="0" y="30" font-size="12">{active} of '
+    p.append('<text class="d" x="0" y="10" font-size="10">the year</text>')
+    p.append(f'<text class="d" x="0" y="26" font-size="10">{active} of '
              f'{len(day_list)} days had a contribution</text>')
 
     # Density legend. Without it the ramp is just texture.
     legend = "".join(RAMP[i] for i in (1, 6, 10, 12))
-    p.append(f'<text class="d" x="{W - 78}" y="30" font-size="11" '
+    p.append(f'<text class="d" x="{W - 60}" y="26" font-size="9" '
              f'text-anchor="end">less</text>')
-    p.append(f'<text x="{W - 72}" y="30" font-size="11" '
-             f'letter-spacing="3">{escape(legend)}</text>')
-    p.append(f'<text class="d" x="{W}" y="30" font-size="11" '
+    p.append(f'<text x="{W - 56}" y="26" font-size="9" '
+             f'letter-spacing="2">{escape(legend)}</text>')
+    p.append(f'<text class="d" x="{W}" y="26" font-size="9" '
              f'text-anchor="end">more</text>')
 
     # Weekday labels. Mon/Wed/Fri only -- all seven is noise at this row height.
     for dow, name in ((1, "mon"), (3, "wed"), (5, "fri")):
-        p.append(f'<text class="d" x="0" y="{GY + dow * ROW}" font-size="10">{name}</text>')
+        p.append(f'<text class="d" x="0" y="{GY + dow * ROW}" font-size="8">{name}</text>')
 
     for dow in range(7):
         line = "".join(grid.get((w, dow), " ") for w in range(weeks))
@@ -349,11 +348,11 @@ def draw_year(day_list: list[tuple[str, int]]) -> str:
         if day > 7:                      # only the week containing the 1st-7th
             continue
         x = GX + w * week_w
-        if x - last_x < 42:
+        if x - last_x < 26:
             continue
         last_x = x
-        p.append(f'<text class="d" x="{x:.1f}" y="{GY + 7 * ROW + 4}" '
-                 f'font-size="10">{MONTHS[mon - 1]}</text>')
+        p.append(f'<text class="d" x="{x:.1f}" y="{GY + 7 * ROW + 2}" '
+                 f'font-size="8">{MONTHS[mon - 1]}</text>')
 
     style = (
         font_face("text-regular", weight=400) + theme_vars()
@@ -362,7 +361,7 @@ def draw_year(day_list: list[tuple[str, int]]) -> str:
         + f".g{{font-size:{SIZE}px;letter-spacing:{week_w - CHAR:.3f}px;white-space:pre}}"
     )
     total = sum(c for _, c in day_list)
-    return svg(W, GY + 7 * ROW + 12, style, "".join(p),
+    return svg(W, GY + 7 * ROW + 10, style, "".join(p),
                f"Contribution grid for the last year. {total} contributions across "
                f"{active} active days, one character per day.")
 

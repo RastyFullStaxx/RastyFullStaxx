@@ -10,14 +10,16 @@ from xml.sax.saxutils import escape
 
 from svgkit import ROOT, font_face, svg, theme_vars, write
 
-W = 760
-SIZE = 13
+from svgkit import W          # narrow canvas: renders 1:1, no downscaled type
+
+SIZE = 12
 CHAR = SIZE * 0.600      # 0.600 em advance -- the same constant everywhere
 LABEL_X = 0
-ITEM_X = 148          # widest label is "ml & data science"
-LINE_H = 20
-GROUP_GAP = 12
-TOP = 18
+ITEM_X = 0            # label sits on its own line; items get the full width
+LABEL_H = 17          # label to first item row
+LINE_H = 17
+GROUP_GAP = 14
+TOP = 14
 SEP = "  ·  "
 
 # Built from what the public repos actually contain -- manifests read from
@@ -71,7 +73,7 @@ def build() -> str:
         + font_face("text-bold", weight=700)
         + theme_vars()
         + f"text{{font-family:'JBM',monospace;font-size:{SIZE}px}}"
-        + ".l{font-weight:700;fill:var(--dim)}"
+        + ".l{font-weight:700;fill:var(--dim);font-size:10px;letter-spacing:1.4px}"
         + ".i{font-weight:400;fill:var(--fg)}"
     )
 
@@ -83,12 +85,13 @@ def build() -> str:
         parts.append(f'<text class="l" x="{LABEL_X}" y="{y}">{escape(label)}</text>')
         for i, line in enumerate(lines):
             parts.append(
-                f'<text class="i" x="{ITEM_X}" y="{y + i * LINE_H}">{escape(line)}</text>'
+                f'<text class="i" x="{ITEM_X}" y="{y + LABEL_H + i * LINE_H}">'
+                f"{escape(line)}</text>"
             )
-        y += len(lines) * LINE_H + GROUP_GAP
+        y += LABEL_H + len(lines) * LINE_H + GROUP_GAP
         spoken.append(f"{label}: {', '.join(items)}")
 
-    height = y - GROUP_GAP + 8
+    height = y - GROUP_GAP + 6
     return svg(W, height, style, "".join(parts), "Tech stack. " + ". ".join(spoken))
 
 

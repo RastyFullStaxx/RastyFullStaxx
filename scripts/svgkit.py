@@ -44,11 +44,15 @@ def theme_vars() -> str:
     return f":root{{{light}}}@media (prefers-color-scheme:dark){{:root{{{dark}}}}}"
 
 
-# Inner gutter. The profile README column is only ~500-730px wide, so a graphic
-# this size is always scaled down to fill it. At 40 the gutter renders at
-# roughly 24px, which keeps chart content and the sparkline's endpoints clear of
-# the column edge instead of bleeding into the corners.
-PAD = 40
+# Canvas geometry.
+#
+# The profile README column is ~497px wide. Anything wider is scaled down to
+# fit, which shrinks the type with it: the old 840 canvas rendered at 59% and
+# turned 12px labels into 7px. So the canvas is deliberately NARROWER than the
+# column. It renders 1:1, type stays the size it was designed at, and the slack
+# in the column becomes margin once the <img> is centred.
+W = 400          # content width every generator lays out against
+PAD = 30         # inner gutter; total canvas is W + 2*PAD = 460
 
 
 def svg(width: float, height: float, style: str, body: str, label: str,
