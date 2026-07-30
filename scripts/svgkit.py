@@ -46,7 +46,7 @@ def theme_vars() -> str:
 
 # Canvas geometry. Total canvas is W + 2*PAD.
 W = 760          # content width every generator lays out against
-PAD = 18         # inner gutter, so content is not flush against the file's edge
+PAD = 0          # no inner gutter -- original geometry
 
 
 def svg(width: float, height: float, style: str, body: str, label: str,
