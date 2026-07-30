@@ -44,12 +44,23 @@ def theme_vars() -> str:
     return f":root{{{light}}}@media (prefers-color-scheme:dark){{:root{{{dark}}}}}"
 
 
-def svg(width: float, height: float, style: str, body: str, label: str) -> str:
-    """Wrap a document. aria-label carries the meaning; these are <img> tags."""
+PAD = 18   # inner gutter so content is not flush against the file's own edge
+
+
+def svg(width: float, height: float, style: str, body: str, label: str,
+        pad: float = PAD) -> str:
+    """Wrap a document. aria-label carries the meaning; these are <img> tags.
+
+    `pad` widens the canvas and shifts the body right, so callers keep laying
+    out against a clean 0..width box while the rendered graphic gets an even
+    gutter on both sides. Right-anchored text at x=width stays flush right.
+    """
+    total = width + 2 * pad
+    inner = f'<g transform="translate({pad},0)">{body}</g>' if pad else body
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
-        f'viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label)}">'
-        f"<style>{style}</style>{body}</svg>"
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{total}" height="{height}" '
+        f'viewBox="0 0 {total} {height}" role="img" aria-label="{escape(label)}">'
+        f"<style>{style}</style>{inner}</svg>"
     )
 
 

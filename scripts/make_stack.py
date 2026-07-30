@@ -14,27 +14,37 @@ W = 760
 SIZE = 13
 CHAR = SIZE * 0.600      # 0.600 em advance -- the same constant everywhere
 LABEL_X = 0
-ITEM_X = 132
+ITEM_X = 148          # widest label is "ml & data science"
 LINE_H = 20
 GROUP_GAP = 12
 TOP = 18
 SEP = "  ·  "
 
-# Mirrors the six categories and every entry from the previous README's icon
-# rows, in the same order. Nothing dropped in the move away from skillicons.
+# Built from what the public repos actually contain -- manifests read from
+# fnb-lis, CureRays-CRMS, IntelliForm, AgilaEye, digiphoto-booth-system and
+# PharmaSynth, plus the language breakdown GitHub reports. Anything listed here
+# should be defensible in an interview.
 STACK = [
-    ("languages", ["Java", "C#", "C++", "C", "Python", "PHP", "JavaScript",
-                   "TypeScript", "Bash", "MySQL"]),
-    ("backend & api", ["Node.js", "Express", "Spring", ".NET", "FastAPI",
-                       "GraphQL", "Redis", "PostgreSQL", "MongoDB", "SQLite"]),
-    ("frontend", ["React", "Next.js", "Vue", "Svelte", "Bootstrap", "Tailwind",
-                  "HTML", "CSS"]),
-    ("ml & data", ["TensorFlow", "PyTorch", "scikit-learn", "Anaconda",
-                   "pandas", "NumPy"]),
-    ("devops & cloud", ["Docker", "Kubernetes", "Terraform", "AWS", "GCP",
-                        "Azure", "nginx", "Linux", "Bash"]),
-    ("tools", ["Git", "GitHub", "GitLab", "VS Code", "IntelliJ IDEA", "Figma",
-               "Postman"]),
+    ("languages", ["C#", "TypeScript", "JavaScript", "Python", "PHP", "Java",
+                   "C", "C++", "SQL", "Bash", "PowerShell", "R"]),
+    ("backend & api", ["Node.js", ".NET", "FastAPI", "Hono", "Express",
+                       "Laravel", "Spring", "Uvicorn", "Zod", "Pydantic",
+                       "REST", "GraphQL"]),
+    ("data", ["Prisma", "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis",
+              "ExcelJS", "pandas"]),
+    ("frontend", ["Next.js", "React", "Svelte", "Vue", "Vite", "Tailwind",
+                  "Bootstrap", "Blade", "HTML", "CSS"]),
+    ("ml & data science", ["PyTorch", "Transformers", "TensorFlow",
+                           "scikit-learn", "NumPy", "SciPy", "NLTK",
+                           "Jupyter", "pdfplumber", "PyMuPDF", "Pillow"]),
+    ("apps & desktop", ["Electron", "Tauri", "Unity", "WPF", "ffmpeg"]),
+    ("visualisation", ["ECharts", "Recharts", "D3", "Three.js", "pdfmake",
+                       "docxtemplater"]),
+    ("devops & cloud", ["Docker", "GitHub Actions", "Kubernetes", "Terraform",
+                        "AWS", "GCP", "Azure", "nginx", "Linux"]),
+    ("testing", ["Playwright", "Vitest", "Testing Library", "pytest"]),
+    ("tools", ["Git", "GitHub", "GitLab", "VS Code", "Visual Studio",
+               "IntelliJ IDEA", "Figma", "Postman"]),
 ]
 
 
