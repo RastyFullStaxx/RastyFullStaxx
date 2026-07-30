@@ -3,15 +3,15 @@
 Tradeoff, stated plainly: image headings have no anchor links, so GitHub's README
 outline goes empty. The aria-label carries the word for screen readers.
 
-These deliberately do NOT use the shared W/PAD from svgkit. The dividers span the
-full README column and are not inset with the data graphics: they are the rule
-everything else sits under, so they stay full width no matter what the charts do.
+Same canvas as the data graphics, so every element on the page is one
+consistently sized, centred block. The label sits centred with the rule running
+out to both sides.
 
 Run once:  python scripts/make_headings.py
 """
-from svgkit import ROOT, font_face, svg, theme_vars, write
+from svgkit import W, ROOT, font_face, svg, theme_vars, write
 
-W, H = 760, 34     # full column width, independent of the chart canvas
+H = 34
 BASE = 23          # text baseline
 SIZE = 15
 TRACK = 3.2        # letter-spacing; the label is small, it needs the air
@@ -41,7 +41,7 @@ def build(word: str) -> str:
         f'<text x="{mid - TRACK / 2:.1f}" y="{BASE}" text-anchor="middle">{word}</text>'
         f'<line x1="{right_start:.1f}" y1="{y}" x2="{W}" y2="{y}"/>'
     )
-    return svg(W, H, style, body, word, pad=0)
+    return svg(W, H, style, body, word)
 
 
 def main() -> None:
