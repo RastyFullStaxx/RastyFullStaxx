@@ -1,124 +1,72 @@
-![RASTY CANNU ESPARTERO](https://github.com/RastyFullStaxx/RastyFullStaxx/assets/133841842/843c0b91-93b6-48f3-9437-1069f2f2e086)
-
-## Visual overview
-
-<br>
-  
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RastyFullStaxx&theme=github_dark" alt="Profile details" />
+  <img src="portrait.svg" width="460" alt="ASCII portrait of Rasty Cannu Espartero, drawn one row at a time." />
 </p>
 
+<h1 align="center">Rasty Cannu Espartero</h1>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RastyFullStaxx&theme=github_dark" alt="Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RastyFullStaxx&theme=github_dark&utcOffset=8" alt="Productive time" />
+  <samp>Backend &middot; Full-stack &middot; Machine learning &middot; Security</samp><br />
+  <samp>Makati City, Philippines &middot; UTC+8</samp>
 </p>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RastyFullStaxx&theme=github_dark" alt="Repos per language" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=RastyFullStaxx&theme=github_dark" alt="Most used languages" />
+> Everything on this page is drawn by this repository. The portrait, the
+> headings, the stack and every graphic below are generated here and committed
+> as SVG. Nothing is fetched from a third party at render time, so there is no
+> card service to rate-limit it and no theme but the one I chose.
+
+<br />
+
+<img src="h-stats.svg" width="760" alt="stats" />
+
+<p>
+  <img src="stats.svg" width="370" alt="Contribution totals for the last 365 days, with a weekly sparkline." />
+  <img src="streak.svg" width="370" alt="Current and longest contribution streaks, with date ranges." />
 </p>
 
+<img src="langs.svg" width="760" alt="Top languages, ranked by bytes written and by number of repositories." />
 
-<br>
+<img src="year.svg" width="760" alt="The last year of contributions, one character per day." />
 
-## Tech stack
-
-<br>
-
-<div align="center">
-
-<p><strong>Languages</strong></p>
-<img src="https://skillicons.dev/icons?i=java,cs,cpp,c,python,php,js,ts,bash,mysql&perline=10" alt="Languages" />
-
-<p><strong>Backend & API</strong></p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,spring,dotnet,fastapi,graphql,redis,postgres,mongodb,sqlite&perline=10" alt="Backend and API" />
-
-<p><strong>Frontend</strong></p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,vue,svelte,bootstrap,tailwind,html,css&perline=10" alt="Frontend" />
-
-<p><strong>Machine Learning & Data</strong></p>
-<img src="https://skillicons.dev/icons?i=tensorflow,pytorch,sklearn,anaconda&perline=8" alt="ML and Data" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" height="34" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" height="34" />
-
-<p><strong>DevOps & Cloud</strong></p>
-<img src="https://skillicons.dev/icons?i=docker,kubernetes,terraform,aws,gcp,azure,nginx,linux,bash&perline=10" alt="DevOps and Cloud" />
-
-<p><strong>Tools</strong></p>
-<img src="https://skillicons.dev/icons?i=git,github,gitlab,vscode,idea,figma,postman&perline=10" alt="Tools" />
-
-</div>
-
-<br>
-
-<!-- ===================== WHAT I DO ===================== -->
-
-<h2 align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="28" />
-  &nbsp; What I Do
-</h2>
-
-I build across backend systems, full-stack products, machine learning workflows, and practical cybersecurity.  
-My work focuses on creating software that is <strong>fast, stable, secure, and engineered with intent</strong>.
-
-<div align="left">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="24" /> <strong>Backend Engineering</strong> — APIs, services, architectures  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="24" /> <strong>DevOps & Automation</strong> — CI/CD, containers, IaC  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="24" /> <strong>Machine Learning</strong> — model integration, inference pipelines  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="24" /> <strong>Cybersecurity</strong> — secure builds, secrets hygiene, hardening  
-</div>
-
-<br>
-
-<!-- ===================== CURRENT FOCUS ===================== -->
-
-<h2 align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" height="26" />
-  &nbsp; Current Focus
-</h2>
-
-<div align="left">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="22" /> <strong>CI/CD Excellence</strong> — faster pipelines, reproducible infra  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="22" /> <strong>Backend Performance</strong> — profiling, async, caching  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" height="22" /> <strong>Cloud-Native Patterns</strong> — scalable, predictable systems  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="22" /> <strong>Security-First Mindset</strong> — secure tooling, safe delivery  
-</div>
-
-<br>
-
-<!-- ===================== EXPLORING ===================== -->
-
-<h2 align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="26"/>
-  &nbsp; Currently Exploring
-</h2>
-
-<div align="left">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="22" /> <strong>GitOps & Platform Engineering</strong> — smoother developer platforms  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" height="22" /> <strong>Event-Driven Systems</strong> — streaming, reactive flows  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" height="22" /> <strong>Cybersecurity Workflows</strong> — threat modeling, secure pipelines  
-<br>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="22" /> <strong>ML Optimization</strong> — faster inference, compact models  
-</div>
-
-<br>
-
-<p align="center">
-  <img
-    src="https://capsule-render.vercel.app/api?type=waving&height=180&section=header&text=RASTY%20CANNU%20ESPARTERO&fontColor=ffffff&fontSize=32&theme=github_dark"
-    alt="Wave header"
-  />
+<p>
+  <samp>Refreshed nightly by a scheduled action, from the GitHub GraphQL API.</samp><br />
+  <samp>The window is pinned to whole UTC days so the numbers do not drift.</samp>
 </p>
 
+<br />
+
+<img src="h-stack.svg" width="760" alt="stack" />
+
+<img src="stack.svg" width="760" alt="Tech stack: languages, backend, frontend, machine learning and data, devops, tools." />
+
+<br />
+
+<img src="h-work.svg" width="760" alt="work" />
+
+<p>
+  <samp><b>I build</b></samp><br />
+  Backend systems and APIs, full-stack products, machine learning workflows,
+  and practical security. The through-line is software that is fast, stable,
+  and engineered on purpose rather than assembled by accident.
+</p>
+
+<p>
+  <samp><b>Sharpening now</b></samp><br />
+  Faster and more reproducible CI/CD. Backend performance work &mdash; profiling,
+  async, caching. Cloud-native patterns that stay predictable as they scale.
+</p>
+
+<p>
+  <samp><b>Reading into next</b></samp><br />
+  GitOps and platform engineering, event-driven and streaming systems, and
+  making model inference smaller and faster.
+</p>
+
+<br />
+
+<p>
+  <samp>
+    <a href="https://www.reallife.ph">reallife.ph</a> &middot;
+    <a href="https://www.linkedin.com/in/rastyespartero">linkedin</a> &middot;
+    <a href="mailto:rcannuespartero@gmail.com">rcannuespartero@gmail.com</a>
+  </samp>
+</p>

@@ -1,0 +1,13 @@
+# Generated files are written by a Linux runner. Without this, a Windows clone
+# checks them out as CRLF and `git status --porcelain` reports every file as
+# modified on every nightly run -- a commit every night on line endings alone.
+*.svg text eol=lf
+*.py  text eol=lf
+*.yml text eol=lf
+*.md  text eol=lf
+
+# Binary. Never touch these.
+*.woff2 binary
+*.ttf   binary
+*.jpg   binary
+*.png   binary
