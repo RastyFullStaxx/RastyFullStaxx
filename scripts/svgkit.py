@@ -44,11 +44,11 @@ def theme_vars() -> str:
     return f":root{{{light}}}@media (prefers-color-scheme:dark){{:root{{{dark}}}}}"
 
 
-# Inner gutter. The profile README column is only ~500-730px wide, so a
-# 796-wide graphic is always scaled down to fill it; this gutter renders at
-# roughly 19-28px. Prose in the README is indented with a matching run of
-# &nbsp; so text and graphics share a left edge. Change one, change the other.
-PAD = 30
+# Inner gutter. The profile README column is only ~500-730px wide, so a graphic
+# this size is always scaled down to fill it. At 40 the gutter renders at
+# roughly 24px, which keeps chart content and the sparkline's endpoints clear of
+# the column edge instead of bleeding into the corners.
+PAD = 40
 
 
 def svg(width: float, height: float, style: str, body: str, label: str,
