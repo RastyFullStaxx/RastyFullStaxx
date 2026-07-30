@@ -30,7 +30,11 @@ def build(word: str) -> str:
         f'<text x="0" y="{BASE}">{word}</text>'
         f'<line x1="{rule_x}" y1="{BASE - 5}" x2="{W}" y2="{BASE - 5}"/>'
     )
-    return svg(W, H, style, body, word)
+    # pad=0 deliberately. The heading rule is the widest element on the page and
+    # everything else lines up against it: prose runs the full column width
+    # (GitHub gives no way to put a right margin on flowing text), and the data
+    # graphics keep their own gutter so they sit visibly inside the rule.
+    return svg(W, H, style, body, word, pad=0)
 
 
 def main() -> None:

@@ -17,20 +17,20 @@
 
 <br />
 
-<img src="h-about.svg" width="840" alt="about" />
+<img src="h-about.svg" width="760" alt="about" />
 
 <p align="left">
 I build software end to end: APIs, data models, clients, and the pipelines that ship them. Most of my professional work sits under NDA and cannot be shown here, and it has centred on AI training and integration, DevOps, backend services, and automation: preparing and evaluating training data, taking models from evaluation into production, building and maintaining delivery pipelines, and removing the manual steps between a commit and a running system. I work most often where backend meets infrastructure, and I care about what makes a service predictable, observable, and cheap to run once it is live. The repositories below are personal projects, built in the open.
 </p>
 
-<p align="left">
+<p align="center">
   <samp>Currently sharpening: CI/CD reproducibility &middot; backend performance &middot; cloud-native patterns</samp><br />
   <samp>Reading into next: GitOps &middot; event-driven systems &middot; smaller, faster inference</samp>
 </p>
 
 <br />
 
-<img src="h-stats.svg" width="840" alt="stats" />
+<img src="h-stats.svg" width="760" alt="stats" />
 
 <img src="stats.svg" width="840" alt="Contributions in the last year, with active days, best week, and a weekly sparkline." />
 
@@ -42,7 +42,7 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 
 <br />
 
-<img src="h-projects.svg" width="840" alt="projects" />
+<img src="h-projects.svg" width="760" alt="projects" />
 
 <p align="left">
   <samp>These are personal projects, built in the open. My professional work is under NDA.</samp>
@@ -84,19 +84,19 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 
 <br />
 
-<img src="h-stack.svg" width="840" alt="stack" />
+<img src="h-stack.svg" width="760" alt="stack" />
 
 <img src="stack.svg" width="840" alt="Tech stack across languages, backend and API, data, frontend, machine learning, apps and desktop, visualisation, devops and cloud, testing, and tools." />
 
 <br />
 
-<img src="h-work.svg" width="840" alt="work" />
+<img src="h-work.svg" width="760" alt="work" />
 
-<p align="left">
+<p align="center">
 Open to backend, DevOps, and AI integration roles, and to collaboration on work where reliability matters more than novelty. Happy to talk through the NDA work in general terms. Email is the fastest way to reach me.
 </p>
 
-<p align="left">
+<p align="center">
   <a href="mailto:rcannuespartero@gmail.com">rcannuespartero@gmail.com</a> &middot;
   <a href="https://www.linkedin.com/in/rastyespartero">LinkedIn</a>
 </p>
