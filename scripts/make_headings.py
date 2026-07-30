@@ -3,9 +3,7 @@
 Tradeoff, stated plainly: image headings have no anchor links, so GitHub's README
 outline goes empty. The aria-label carries the word for screen readers.
 
-Same canvas as the data graphics, so every element on the page is one
-consistently sized, centred block. The label sits centred with the rule running
-out to both sides.
+Lowercase mono label on the left with a hairline rule running to the right edge.
 
 Run once:  python scripts/make_headings.py
 """
@@ -15,7 +13,6 @@ H = 34
 BASE = 23          # text baseline
 SIZE = 15
 TRACK = 3.2        # letter-spacing; the label is small, it needs the air
-GAP = 16           # space between the label and each rule
 
 HEADINGS = ["about", "stats", "projects", "stack", "work"]
 
@@ -28,18 +25,12 @@ def build(word: str) -> str:
         f"letter-spacing:{TRACK}px;fill:var(--dim)}}"
         + "line{stroke:var(--faint);stroke-width:1}"
     )
-    # Advance is 0.600 em, plus tracking on every character. letter-spacing also
-    # adds a trailing gap after the last glyph, so the visual centre sits half a
-    # track left of the geometric one.
+    # Advance is 0.600 em, plus tracking on every character.
     label_w = len(word) * (SIZE * 0.600 + TRACK)
-    mid = W / 2
-    left_end = mid - label_w / 2 - GAP
-    right_start = mid + label_w / 2 + GAP
-    y = BASE - 5
+    rule_x = label_w + 16
     body = (
-        f'<line x1="0" y1="{y}" x2="{left_end:.1f}" y2="{y}"/>'
-        f'<text x="{mid - TRACK / 2:.1f}" y="{BASE}" text-anchor="middle">{word}</text>'
-        f'<line x1="{right_start:.1f}" y1="{y}" x2="{W}" y2="{y}"/>'
+        f'<text x="0" y="{BASE}">{word}</text>'
+        f'<line x1="{rule_x}" y1="{BASE - 5}" x2="{W}" y2="{BASE - 5}"/>'
     )
     return svg(W, H, style, body, word)
 

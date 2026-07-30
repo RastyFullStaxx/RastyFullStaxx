@@ -18,7 +18,7 @@
 <br />
 
 <p align="center">
-  <img src="h-about.svg" width="460" alt="about" />
+  <img src="h-about.svg" width="796" alt="about" />
 </p>
 
 <p align="center">
@@ -33,29 +33,29 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 <br />
 
 <p align="center">
-  <img src="h-stats.svg" width="460" alt="stats" />
+  <img src="h-stats.svg" width="796" alt="stats" />
 </p>
 
 <p align="center">
-  <img src="stats.svg" width="460" alt="Contributions in the last year, with active days, best week, and a weekly sparkline." />
+  <img src="stats.svg" width="796" alt="Contributions in the last year, with active days, best week, and a weekly sparkline." />
 </p>
 
 <p align="center">
-  <img src="streak.svg" width="460" alt="Current and longest contribution streaks, with date ranges." />
+  <img src="streak.svg" width="796" alt="Current and longest contribution streaks, with date ranges." />
 </p>
 
 <p align="center">
-  <img src="langs.svg" width="460" alt="Top languages, ranked by bytes written and by number of repositories." />
+  <img src="langs.svg" width="796" alt="Top languages, ranked by bytes written and by number of repositories." />
 </p>
 
 <p align="center">
-  <img src="year.svg" width="460" alt="The last year of contributions, one character per day." />
+  <img src="year.svg" width="796" alt="The last year of contributions, one character per day." />
 </p>
 
 <br />
 
 <p align="center">
-  <img src="h-projects.svg" width="460" alt="projects" />
+  <img src="h-projects.svg" width="796" alt="projects" />
 </p>
 
 <p align="center">
@@ -105,17 +105,17 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 <br />
 
 <p align="center">
-  <img src="h-stack.svg" width="460" alt="stack" />
+  <img src="h-stack.svg" width="796" alt="stack" />
 </p>
 
 <p align="center">
-  <img src="stack.svg" width="460" alt="Tech stack across languages, backend and API, data, frontend, machine learning, apps and desktop, visualisation, devops and cloud, testing, and tools." />
+  <img src="stack.svg" width="796" alt="Tech stack across languages, backend and API, data, frontend, machine learning, apps and desktop, visualisation, devops and cloud, testing, and tools." />
 </p>
 
 <br />
 
 <p align="center">
-  <img src="h-work.svg" width="460" alt="work" />
+  <img src="h-work.svg" width="796" alt="work" />
 </p>
 
 <p align="center">

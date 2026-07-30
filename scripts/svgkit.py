@@ -44,15 +44,9 @@ def theme_vars() -> str:
     return f":root{{{light}}}@media (prefers-color-scheme:dark){{:root{{{dark}}}}}"
 
 
-# Canvas geometry.
-#
-# The profile README column is ~497px wide. Anything wider is scaled down to
-# fit, which shrinks the type with it: the old 840 canvas rendered at 59% and
-# turned 12px labels into 7px. So the canvas is deliberately NARROWER than the
-# column. It renders 1:1, type stays the size it was designed at, and the slack
-# in the column becomes margin once the <img> is centred.
-W = 400          # content width every generator lays out against
-PAD = 30         # inner gutter; total canvas is W + 2*PAD = 460
+# Canvas geometry. Total canvas is W + 2*PAD.
+W = 760          # content width every generator lays out against
+PAD = 18         # inner gutter, so content is not flush against the file's edge
 
 
 def svg(width: float, height: float, style: str, body: str, label: str,
