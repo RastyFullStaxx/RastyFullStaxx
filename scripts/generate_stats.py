@@ -13,7 +13,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
-from svgkit import ROOT, font_face, svg, theme_vars, write
+from svgkit import ROOT, escape, font_face, svg, theme_vars, write
 
 API = "https://api.github.com/graphql"
 RAMP = " .`:-=+*cs#%@"          # the portrait's own ramp, reused for the year grid
@@ -190,99 +190,101 @@ def fmt(n: int) -> str:
     return f"{n / 1000:.2f}k" if n >= 1000 else str(n)
 
 
+MONTHS = ["jan", "feb", "mar", "apr", "may", "jun",
+          "jul", "aug", "sep", "oct", "nov", "dec"]
+
+
+def nice_date(iso: str) -> str:
+    """2026-07-25 -> jul 25"""
+    y, m, d = iso.split("-")
+    return f"{MONTHS[int(m) - 1]} {int(d)}"
+
+
 def draw_stats(user: dict, day_list: list[tuple[str, int]]) -> str:
     c = user["contributionsCollection"]
     total = c["contributionCalendar"]["totalContributions"]
-    repos = user["repositories"]["nodes"]
-    stars = sum(r["stargazerCount"] for r in repos)
-    forks = sum(r["forkCount"] for r in repos)
-    since = user["createdAt"][:4]
-    W, H = 370, 232
-    p = [
-        f'<text class="d" x="0" y="16" font-size="11">contributions, last 365 days</text>',
-        f'<text class="b" x="0" y="58" font-size="38">{fmt(total)}</text>',
-    ]
+    wk = weekly(day_list)
+    active = sum(1 for _, n in day_list if n > 0)
+    W, H = 760, 150
 
-    rows = [
-        ("commits", fmt(c["totalCommitContributions"])),
-        ("pull requests", c["totalPullRequestContributions"]),
-        ("reviews", c["totalPullRequestReviewContributions"]),
-        ("issues", c["totalIssueContributions"]),
-        ("public repos", user["repositories"]["totalCount"]),
-        ("contributed to", user["repositoriesContributedTo"]["totalCount"]),
-        ("stars earned", stars),
-        ("forks", forks),
-        ("followers", user["followers"]["totalCount"]),
-        ("on github since", since),
+    p = [
+        f'<text class="b" x="0" y="52" font-size="46">{total}</text>',
+        '<text class="d" x="0" y="76" font-size="12">contributions in the last year</text>',
+        f'<text x="{W}" y="26" font-size="17" text-anchor="end">{active}</text>',
+        f'<text class="d" x="{W}" y="42" font-size="11" text-anchor="end">active days</text>',
+        f'<text x="{W}" y="66" font-size="17" text-anchor="end">{max(wk)}</text>',
+        f'<text class="d" x="{W}" y="82" font-size="11" text-anchor="end">best week</text>',
     ]
-    for i, (label, value) in enumerate(rows):
-        y = 84 + i * 15
-        p.append(f'<text class="d" x="0" y="{y}" font-size="12">{label}</text>')
-        p.append(f'<text x="{W}" y="{y}" font-size="12" text-anchor="end">{value}</text>')
 
     # Weekly aggregate, so a line is defensible here -- continuity is real.
-    # Daily counts get columns instead; see draw_year.
-    wk = weekly(day_list)
+    # Daily counts are sparse and discrete and get characters instead; a line
+    # through 0, 0, 11, 0 would claim values that never existed. See draw_year.
     peak = max(wk) or 1
-    gy, gh = H - 4, 34
+    gy, gh = H - 12, 46
     step = W / (len(wk) - 1)
     pts = " ".join(f"{i * step:.1f},{gy - v / peak * gh:.1f}" for i, v in enumerate(wk))
-    p.append(f'<polyline points="{pts}" fill="none" stroke="var(--fg)" stroke-width="1.2" '
-             'stroke-linejoin="round"/>')
-    p.append(f'<polyline points="0,{gy} {pts} {W},{gy}" fill="var(--fg)" opacity="0.10"/>')
+    p.append(f'<polyline points="0,{gy} {pts} {W},{gy}" fill="var(--fg)" opacity="0.09"/>')
+    p.append(f'<polyline points="{pts}" fill="none" stroke="var(--fg)" stroke-width="1.3" '
+             'stroke-linejoin="round" stroke-linecap="round"/>')
+    # Mark where the line ends, so "now" is unambiguous.
+    p.append(f'<circle cx="{W}" cy="{gy - wk[-1] / peak * gh:.1f}" r="3" fill="var(--fg)"/>')
 
-    label = (f"{total} contributions in the last 365 days. "
-             + ". ".join(f"{k}: {v}" for k, v in rows))
-    return svg(W, H, base_style(), "".join(p), label)
+    return svg(W, H, base_style(), "".join(p),
+               f"{total} contributions in the last year. {active} active days. "
+               f"Best week {max(wk)}. Weekly totals shown as a sparkline.")
 
 
 def draw_streak(s: dict) -> str:
-    W, H = 370, 232
-    span = lambda r: f"{r[0]} to {r[1]}" if r[0] else "--"
-    p = [
-        '<text class="d" x="0" y="16" font-size="11">streak</text>',
-        f'<text class="b" x="0" y="58" font-size="38">{s["current"]}</text>',
-        f'<text class="d" x="0" y="78" font-size="12">current, days</text>',
-        f'<text class="d" x="0" y="96" font-size="10">{span(s["current_range"])}</text>',
-        f'<line x1="0" y1="124" x2="{W}" y2="124" stroke="var(--faint)" stroke-width="1"/>',
-        f'<text class="b" x="0" y="168" font-size="38">{s["longest"]}</text>',
-        f'<text class="d" x="0" y="188" font-size="12">longest, days</text>',
-        f'<text class="d" x="0" y="206" font-size="10">{span(s["longest_range"])}</text>',
-    ]
-    label = (f"Current streak {s['current']} days, {span(s['current_range'])}. "
-             f"Longest streak {s['longest']} days, {span(s['longest_range'])}.")
-    return svg(W, H, base_style(), "".join(p), label)
+    W, H = 760, 92
+    MID = 320                      # divider; the two halves read as one panel
+    span = lambda r: f"{nice_date(r[0])} – {nice_date(r[1])}" if r[0] else "—"
+
+    p = []
+    for x, n, label, rng in (
+        (0, s["current"], "current streak", s["current_range"]),
+        (MID + 40, s["longest"], "longest streak", s["longest_range"]),
+    ):
+        p += [
+            f'<text class="b" x="{x}" y="44" font-size="38">{n}</text>',
+            f'<text class="d" x="{x}" y="66" font-size="12">{label}</text>',
+            f'<text class="d" x="{x}" y="84" font-size="11">{span(rng)}</text>',
+        ]
+    p.append(f'<line x1="{MID}" y1="12" x2="{MID}" y2="{H - 8}" '
+             'stroke="var(--faint)" stroke-width="1"/>')
+
+    return svg(W, H, base_style(), "".join(p),
+               f"Current streak {s['current']} days, {span(s['current_range'])}. "
+               f"Longest streak {s['longest']} days, {span(s['longest_range'])}.")
 
 
 def draw_langs(by_bytes: list, by_repo: list) -> str:
-    W, H = 760, 38 + TOP_LANGS * 24
-    col = 360
-    p = []
+    W = 760
+    ROW = 24
+    COL = 360                      # column width
+    NAME_W = 96                    # name gutter, then the bar starts
+    BAR_MAX = 170
+    H = 30 + max(len(by_bytes), len(by_repo)) * ROW
+
     total = sum(v for _, v in by_bytes) or 1
+    peak = max((v for _, v in by_repo), default=1) or 1
+    p = []
 
-    p.append('<text class="d" x="0" y="14" font-size="11">by bytes</text>')
-    for i, (name, size) in enumerate(by_bytes):
-        y, pct = 38 + i * 24, size / total * 100
-        p.append(f'<text x="0" y="{y}" font-size="12">{name}</text>')
-        p.append(f'<text class="d" x="{col}" y="{y}" font-size="11" '
-                 f'text-anchor="end">{pct:.1f}%</text>')
-        p.append(f'<rect class="tr" x="0" y="{y + 5}" width="{col}" height="3"/>')
-        p.append(f'<rect class="bar" x="0" y="{y + 5}" width="{col * size / total:.1f}" height="3"/>')
+    def column(x0: int, items: list, head: str, denom: int, fmt_val) -> None:
+        p.append(f'<text class="d" x="{x0}" y="12" font-size="11">{head}</text>')
+        for i, (name, v) in enumerate(items):
+            y = 36 + i * ROW
+            p.append(f'<text x="{x0}" y="{y}" font-size="12">{escape(name.lower())}</text>')
+            p.append(f'<rect class="bar" x="{x0 + NAME_W}" y="{y - 8}" rx="1.5" '
+                     f'width="{BAR_MAX * v / denom:.1f}" height="7"/>')
+            p.append(f'<text class="d" x="{x0 + COL}" y="{y}" font-size="11" '
+                     f'text-anchor="end">{fmt_val(v)}</text>')
 
-    x0 = 400
-    peak = max(v for _, v in by_repo) or 1
-    p.append(f'<text class="d" x="{x0}" y="14" font-size="11">by repository</text>')
-    for i, (name, n) in enumerate(by_repo):
-        y = 38 + i * 24
-        p.append(f'<text x="{x0}" y="{y}" font-size="12">{name}</text>')
-        p.append(f'<text class="d" x="{W}" y="{y}" font-size="11" text-anchor="end">{n}</text>')
-        p.append(f'<rect class="tr" x="{x0}" y="{y + 5}" width="{W - x0}" height="3"/>')
-        p.append(f'<rect class="bar" x="{x0}" y="{y + 5}" '
-                 f'width="{(W - x0) * n / peak:.1f}" height="3"/>')
+    column(0, by_bytes, "by bytes", total, lambda v: f"{v / total * 100:.0f}%")
+    column(400, by_repo, "by repos", peak, str)
 
     label = "Top languages by bytes: " + ", ".join(
-        f"{k} {v / total * 100:.1f} percent" for k, v in by_bytes
-    ) + ". By repository: " + ", ".join(f"{k} {v}" for k, v in by_repo)
+        f"{k} {v / total * 100:.0f} percent" for k, v in by_bytes
+    ) + ". By repository count: " + ", ".join(f"{k} {v}" for k, v in by_repo)
     return svg(W, H, base_style(), "".join(p), label)
 
 
@@ -296,33 +298,73 @@ def draw_year(day_list: list[tuple[str, int]]) -> str:
     SIZE = 11
     CHAR = SIZE * 0.600
     ROW = 13
+    GX = 40                        # grid left edge; weekday labels sit left of it
+    GY = 62                        # first grid row baseline
     peak = max(c for _, c in day_list) or 1
 
     grid: dict[tuple[int, int], str] = {}
     for i, (_, count) in enumerate(day_list):
         week, dow = i // 7, i % 7
-        if count == 0:
-            level = 0
-        else:
-            # +1 so any activity at all clears the blank slot.
-            level = 1 + int(count / peak * (len(RAMP) - 2))
+        # +1 so any activity at all clears the blank slot: a day with one
+        # contribution must not look identical to a day with none.
+        level = 0 if count == 0 else 1 + int(count / peak * (len(RAMP) - 2))
         grid[(week, dow)] = RAMP[min(level, len(RAMP) - 1)]
 
     weeks = max(w for w, _ in grid) + 1
-    rows = []
+    week_w = (W - GX) / weeks
+    nbsp = lambda s: s.replace(" ", "&#160;")
+
+    p = []
+    active = sum(1 for _, n in day_list if n > 0)
+    p.append('<text class="d" x="0" y="12" font-size="11">the year</text>')
+    p.append(f'<text class="d" x="0" y="30" font-size="12">{active} of '
+             f'{len(day_list)} days had a contribution</text>')
+
+    # Density legend. Without it the ramp is just texture.
+    legend = "".join(RAMP[i] for i in (1, 6, 10, 12))
+    p.append(f'<text class="d" x="{W - 78}" y="30" font-size="11" '
+             f'text-anchor="end">less</text>')
+    p.append(f'<text x="{W - 72}" y="30" font-size="11" '
+             f'letter-spacing="3">{escape(legend)}</text>')
+    p.append(f'<text class="d" x="{W}" y="30" font-size="11" '
+             f'text-anchor="end">more</text>')
+
+    # Weekday labels. Mon/Wed/Fri only -- all seven is noise at this row height.
+    for dow, name in ((1, "mon"), (3, "wed"), (5, "fri")):
+        p.append(f'<text class="d" x="0" y="{GY + dow * ROW}" font-size="10">{name}</text>')
+
     for dow in range(7):
         line = "".join(grid.get((w, dow), " ") for w in range(weeks))
-        rows.append(f'<text x="0" y="{16 + dow * ROW}">{line.replace(" ", "&#160;")}</text>')
+        p.append(f'<text class="g" x="{GX}" y="{GY + dow * ROW}">{nbsp(escape(line))}</text>')
+
+    # Month labels, placed at the week each month first appears. Skip a label
+    # that would collide with the previous one.
+    last_x = -999
+    for w in range(weeks):
+        iso = next((d for i, (d, _) in enumerate(day_list)
+                    if i // 7 == w and i % 7 == 0), None)
+        if not iso:
+            continue
+        mon, day = int(iso[5:7]), int(iso[8:10])
+        if day > 7:                      # only the week containing the 1st-7th
+            continue
+        x = GX + w * week_w
+        if x - last_x < 42:
+            continue
+        last_x = x
+        p.append(f'<text class="d" x="{x:.1f}" y="{GY + 7 * ROW + 4}" '
+                 f'font-size="10">{MONTHS[mon - 1]}</text>')
 
     style = (
-        font_face("ramp") + theme_vars()
-        + f"text{{font-family:'JBM',monospace;font-size:{SIZE}px;fill:var(--fg);"
-        f"letter-spacing:{W / weeks - CHAR:.3f}px;white-space:pre}}"
+        font_face("text-regular", weight=400) + theme_vars()
+        + f"text{{font-family:'JBM',monospace;fill:var(--fg)}}"
+        + ".d{fill:var(--dim)}"
+        + f".g{{font-size:{SIZE}px;letter-spacing:{week_w - CHAR:.3f}px;white-space:pre}}"
     )
     total = sum(c for _, c in day_list)
-    return svg(W, 16 + 7 * ROW, style, "".join(rows),
-               f"Contribution grid for the last year, {total} contributions, "
-               f"one character per day.")
+    return svg(W, GY + 7 * ROW + 12, style, "".join(p),
+               f"Contribution grid for the last year. {total} contributions across "
+               f"{active} active days, one character per day.")
 
 
 # --------------------------------------------------------------------------
