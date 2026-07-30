@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-I build software end to end: APIs, data models, clients, and the pipelines that ship them. Most of my professional work sits under NDA and cannot be shown here, and it has centred on AI training and integration, DevOps, backend services, and automation: preparing and evaluating training data, taking models from evaluation into production, building and maintaining delivery pipelines, and removing the manual steps between a commit and a running system. I work most often where backend meets infrastructure, and I care about what makes a service predictable, observable, and cheap to run once it is live. The repositories below are personal projects, built in the open.
+I build software end to end: APIs, data models, clients, and the pipelines that ship them. Most of my professional work sits under NDA and cannot be shown here, and it has centred on AI training and integration, DevOps, backend services, and automation: preparing and evaluating training data, taking models from evaluation into production, building and maintaining delivery pipelines, and removing the manual steps between a commit and a running system. I work most often where backend meets infrastructure, and I care about what makes a service predictable, observable, and cheap to run once it is live.<!-- The repositories below are personal projects, built in the open. -->
 </p>
 
 <p align="center">
@@ -51,6 +51,9 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 <p align="center">
   <img src="year.svg" width="760" alt="The last year of contributions, one character per day." />
 </p>
+
+<!-- PROJECTS -- hidden for now. Delete these two comment markers to
+     restore, and the matching one in the about paragraph above.
 
 <br />
 
@@ -101,6 +104,7 @@ I build software end to end: APIs, data models, clients, and the pipelines that 
 <p align="center">
   <samp><a href="https://github.com/RastyFullStaxx?tab=repositories">All public repositories &rarr;</a></samp>
 </p>
+-->
 
 <br />
 
