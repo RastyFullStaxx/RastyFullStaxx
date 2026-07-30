@@ -12,7 +12,7 @@ BASE = 23          # text baseline
 SIZE = 15
 TRACK = 3.2        # letter-spacing; the label is small, it needs the air
 
-HEADINGS = ["stats", "stack", "work"]
+HEADINGS = ["about", "stats", "projects", "stack", "work"]
 
 
 def build(word: str) -> str:

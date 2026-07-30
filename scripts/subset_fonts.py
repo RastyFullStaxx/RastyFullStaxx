@@ -21,8 +21,9 @@ OUT = ROOT / "assets" / "fonts"
 # clears the cut-out background to nothing.
 RAMP = " .`:-=+*cs#%@"
 
-# Only the letters that actually appear in the section headings.
-HEADINGS = "".join(sorted(set("statsstackwork")))
+# Only the letters that actually appear in the section headings. Keep in sync
+# with HEADINGS in make_headings.py -- a missing glyph renders as tofu.
+HEADINGS = "".join(sorted(set("about stats projects stack work")))
 
 # Basic latin, plus the few punctuation marks the graphics actually use.
 # The middot separates stack items; without it the glyph falls back to tofu.
