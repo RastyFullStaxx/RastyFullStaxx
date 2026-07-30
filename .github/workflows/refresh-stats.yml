@@ -38,8 +38,12 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Commit as the repository owner, not github-actions[bot]. The push is
+          # still authenticated by GITHUB_TOKEN; only the authorship changes. The
+          # noreply address is the one GitHub links to the account, so these show
+          # up as the owner's commits and no bot appears in the contributor list.
+          git config user.name  "Rasty Espartero"
+          git config user.email "133841842+RastyFullStaxx@users.noreply.github.com"
           git add -- $FILES
           git commit -m "stats: refresh"
           git push
